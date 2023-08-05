@@ -1,0 +1,14 @@
+//SBGOLOBT  JOB (ACCT#),S-GOLOB,
+// NOTIFY=&SYSUID,
+// CLASS=B,MSGCLASS=X
+//****************************************************
+//*                                                  *
+//*       TRSMAIN WITH UNPACK OPTION                 *
+//*                                                  *
+//****************************************************
+//STEP     EXEC PGM=TRSMAIN,PARM=UNPACK
+//SYSPRINT DD   SYSOUT=*
+//INFILE   DD   DISP=SHR,DSN=CBT.DFDSS.CBT505.TERSED
+//OUTFILE  DD   DISP=(NEW,CATLG),UNIT=SYSALLDA,
+//       DSN=CBT.DFDSS.CBT505.BACKUP,
+//       SPACE=(CYL,(1500,2000),RLSE),VOL=SER=CBTSTG

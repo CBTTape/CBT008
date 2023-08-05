@@ -1,0 +1,18 @@
+//SBGOLOB1  JOB ,S-GOLOB,
+// NOTIFY=&SYSUID,
+// CLASS=B,MSGCLASS=X
+//******************************************************************//
+//*                                                                *//
+//******************************************************************//
+//*
+//COPY    EXEC PGM=COPYMODS,REGION=4096K,PARM=LABELS
+//STEPLIB  DD  DISP=SHR,DSN=SYS1.CBT.LINKLIB
+//LABLDUMP DD  DISP=SHR,DSN=SBGOLOB.CBT.CNTL(C505LAB4)
+//SYSPRINT DD  SYSOUT=*
+//PARMREPT DD  SYSOUT=*
+//IN   DD VOL=SER=C505MU,DISP=OLD,UNIT=564,LABEL=(,BLP,EXPDT=98000)
+//OUT1 DD VOL=SER=V505MT,DISP=OLD,UNIT=568,LABEL=(,BLP,EXPDT=98000)
+//SYSIN  DD *
+CUMSEP
+FOOTAGE
+/*
